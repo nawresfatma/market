@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Market</string>
+    <string-array name="videos">
+        <item>@drawable/soukelbalgha</item>
+        <item>@drawable/soukelberka</item>
+        <item>@drawable/soukch</item>
+        <item></item>
+
+
+    </string-array>
+
 </resources>
