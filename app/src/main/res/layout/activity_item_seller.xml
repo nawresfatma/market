@@ -21,31 +21,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.github.florent37.shapeofview.shapes.RoundRectView
-                    android:id="@+id/imageView7"
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:elevation="4dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:shape_roundRect_borderColor="@android:color/black"
 
-                    app:shape_roundRect_borderWidth="2dp"
-                    app:shape_roundRect_bottomLeftRadius="10dp"
-                    app:shape_roundRect_bottomRightRadius="10dp"
-                    app:shape_roundRect_topLeftRadius="10dp"
-                    app:shape_roundRect_topRightRadius="10dp">
                     <ImageView
+                  android:id="@+id/rajel"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                        android:src="@drawable/rajell"
                         android:scaleType="fitXY"/>
-                </com.github.florent37.shapeofview.shapes.RoundRectView>
+
 
 
                 <ImageView
-                    android:id="@+id/imageView9"
+                    android:id="@+id/imageView7"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="#000"

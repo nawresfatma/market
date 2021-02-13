@@ -29,7 +29,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         holder.myText.setText(CardList.get(position).getTitle());
-        holder.myImage.setImageResource(R.drawable.soukelberka);
+       // holder.myImage.setImageResource(R.drawable.soukelberka);
     }
 
     @Override
