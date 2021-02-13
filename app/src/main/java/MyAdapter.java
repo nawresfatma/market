@@ -50,7 +50,7 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.MyViewHolder> {
 
             myText=itemView.findViewById(R.id.shopname);
             myText2=itemView.findViewById(R.id.description);
-            myImage=itemView.findViewById(R.id.imageView7);
+            myImage=itemView.findViewById(R.id.rajel);
 
         }
     }
