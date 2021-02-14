@@ -20,7 +20,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_main,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.mycard,parent,false);
         MyViewHolder cardAdapter = new MyViewHolder(view);
         return cardAdapter;
     }
@@ -29,7 +29,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         holder.myText.setText(CardList.get(position).getTitle());
-        holder.myImage.setImageResource(R.drawable.soukelberka);
+        holder.myImage.setImageResource(R.drawable.soukberk);
     }
 
     @Override

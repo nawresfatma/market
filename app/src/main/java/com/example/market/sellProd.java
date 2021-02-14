@@ -1,15 +1,12 @@
 package com.example.market;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.LinearSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SnapHelper;
-
-import android.os.Bundle;
-import android.widget.TextView;
-
-import com.denzcoskun.imageslider.constants.ScaleTypes;
 
 public class sellProd extends AppCompatActivity {
     RecyclerView recycler;

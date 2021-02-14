@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="4dp"
+    android:padding="5dp"
+    android:layout_marginBottom="5dp"
     android:layout_height="wrap_content">
 
     <ImageView
@@ -17,6 +18,20 @@
         android:scaleType="centerCrop"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/mycardimage"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/transparent" />
 
     <TextView
         android:id="@+id/mycardtitle"
@@ -43,4 +58,6 @@
         app:layout_constraintStart_toStartOf="@+id/mycardimage"
         app:layout_constraintTop_toBottomOf="@+id/mycardtitle"
         app:srcCompat="@drawable/watch" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
