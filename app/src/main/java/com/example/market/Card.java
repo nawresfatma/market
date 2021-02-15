@@ -1,7 +1,7 @@
 package com.example.market;
 
 public class Card {
-    private String title;
+            String title;
     private String imagepath;
 
     public Card(String title, String imagepath) {

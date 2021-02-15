@@ -1,5 +1,6 @@
 package com.example.market;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,13 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
 
         holder.myText.setText(CardList.get(position).getTitle());
         holder.myImage.setImageResource(R.drawable.soukberk);
+
+       holder.myText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.getContext().startActivity(new Intent(v.getContext(), sellProd.class));
+
+            }});
     }
 
     @Override
@@ -49,4 +57,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
 
         }
     }
+
+
 }
