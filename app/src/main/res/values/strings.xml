@@ -8,6 +8,18 @@
         <item>Dar Hammuda Pasha was built by Hammuda Pasha Bey, a Muradid prince in 1630. The palace was the residence place</item>
         <item>Dar Hammuda Pasha was built by Hammuda Pasha Bey, a Muradid prince in 1630. The palace was the residence place</item>
     </string-array>
+<string-array name="description2">
+    <item>Balgha mezyena tbarkallah aleha echriwha aad tansewech</item>
+    <item>Balgha okhra mezyena zeda echriwhom zouz ok ?</item>
+</string-array>
+    <string-array name="products">
+        <item>Balgha Hammem</item>
+        <item>Balgha okhra</item>
+    </string-array>
+    <string-array name="price">
+        <item>35DT</item>
+        <item>31DT</item>
+    </string-array>
 
 
 </resources>
