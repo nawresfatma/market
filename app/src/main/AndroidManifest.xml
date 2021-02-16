@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Market">
         <activity android:name=".itemSeller"></activity>
-
+        <activity android:name=".Produits"></activity>
         <activity android:name=".sellProd"></activity>
         <activity android:name=".MainActivity" >
             <intent-filter>

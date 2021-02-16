@@ -72,7 +72,7 @@
                 app:srcCompat="@drawable/tradional" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/Product"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
@@ -122,16 +122,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Products"
-                app:layout_constraintEnd_toEndOf="@+id/imageView2"
-                app:layout_constraintStart_toStartOf="@+id/imageView2"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                app:layout_constraintEnd_toEndOf="@+id/Product"
+                app:layout_constraintStart_toStartOf="@+id/Product"
+                app:layout_constraintTop_toBottomOf="@+id/Product" />
 
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintEnd_toStartOf="@+id/Product"
                 app:layout_constraintHorizontal_bias="0.527"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="parent"
