@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Market">
-        <activity android:name=".Produits"></activity>
+
+        <activity android:name=".Produits" />
         <activity android:name=".itemSeller" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".sellProd">
+        <activity android:name=".sellProd"></activity>
+        <activity android:name=".detailsShops">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

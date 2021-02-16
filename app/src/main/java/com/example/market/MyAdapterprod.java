@@ -1,3 +1,5 @@
+package com.example.market;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,9 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.market.R;
-import com.example.market.myAdapter;
 
 class MyAdapterprod extends RecyclerView.Adapter<MyAdapterprod.MyViewHolder> {
     String data3[], data4[],data5[];
