@@ -9,8 +9,8 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="430dp"
-        android:layout_height="652dp"
+        android:layout_width="411dp"
+        android:layout_height="732dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -26,7 +26,6 @@
                 android:id="@+id/textView"
                 android:layout_width="196dp"
                 android:layout_height="35dp"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
@@ -34,8 +33,11 @@
                 android:textColor="#EB9069"
                 android:textSize="22sp"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.068"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
 
             <TextView
                 android:id="@+id/textView2"
@@ -48,10 +50,9 @@
                 android:text="You can either buy tradictional items with money or your Tynass points you the buttom below to switch between the 2 shops. "
                 android:textColor="#5A5A5A"
                 app:layout_constraintEnd_toEndOf="@+id/textView"
-                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintHorizontal_bias="0.048"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
-
 
             <ImageView
                 android:id="@+id/imageView"
@@ -96,8 +97,8 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler"
-                android:layout_width="427dp"
-                android:layout_height="269dp"
+                android:layout_width="408dp"
+                android:layout_height="270dp"
                 android:layout_marginTop="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
