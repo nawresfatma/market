@@ -8,31 +8,27 @@ import androidx.recyclerview.widget.SnapHelper;
 
 import android.os.Bundle;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Produits extends AppCompatActivity {
+    List<ProductClass> productList=new ArrayList<>();
     RecyclerView recycler2;
     private SnapHelper snapHelper;
-    String s1[] , s2[],s3[];
-    int images[]={R.drawable.balgha,R.drawable.balghaokhra};
     ScaleCenterItemManager scaleCenterItemManager;
-
+ ProductClass prod=new ProductClass(R.drawable.balgha,"Balgha","comfortable to put on","25dt");
+ ProductClass prod1=new ProductClass(R.drawable.balghaokhra,"balgha okhra","tooo comfortable to put on and walk ","30dt");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_produits);
 
-
+        productList.add(prod);
+        productList.add(prod1);
 
             recycler2=findViewById(R.id.recycler1);
-
-
-            s1=getResources().getStringArray(R.array.products);
-            s2=getResources().getStringArray(R.array.description2);
-        s3=getResources().getStringArray(R.array.price);
-
-
-
-        myAdapter myAdapt=new myAdapter(this,s1,s2,images);
+        MyAdapterprod myAdapt=new MyAdapterprod(productList,this);
             recycler2.setAdapter(myAdapt);
             snapHelper = new LinearSnapHelper();
             scaleCenterItemManager = new ScaleCenterItemManager(this, LinearLayoutManager.HORIZONTAL,false);
