@@ -16,8 +16,8 @@ public class Produits extends AppCompatActivity {
     RecyclerView recycler2;
     private SnapHelper snapHelper;
     ScaleCenterItemManager scaleCenterItemManager;
- ProductClass prod=new ProductClass(R.drawable.balgha,"Balgha","comfortable to put on","25dt");
- ProductClass prod1=new ProductClass(R.drawable.balghaokhra,"balgha okhra","tooo comfortable to put on and walk ","30dt");
+ ProductClass prod=new ProductClass(R.drawable.balgha,"Balgha","comfortable to put on","25dt","40%");
+ ProductClass prod1=new ProductClass(R.drawable.balghaokhra,"balgha okhra","tooo comfortable to put on and walk ","30dt","10%");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

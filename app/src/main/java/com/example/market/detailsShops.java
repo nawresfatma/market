@@ -18,9 +18,11 @@ import java.util.List;
 public class detailsShops extends AppCompatActivity {
     RecyclerView recycler3;
     private SnapHelper snapHelper;
-    String s5[] , s6[],s7[];
-    int images[]={R.drawable.productrecycler,R.drawable.productrecycler};
+ List<ProductClass> productClasses=new ArrayList<>();
     ScaleCenterItemManager scaleCenterItemManager;
+    ProductClass product=new ProductClass(R.drawable.balgha,"Balgha","comfortable to put on","25dt");
+    ProductClass product1=new ProductClass(R.drawable.balghaokhra,"balgha okhra","tooo comfortable to put on and walk ","30dt");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,14 +36,12 @@ public class detailsShops extends AppCompatActivity {
         imageSlider.setImageList(slideModels);
 
         recycler3=findViewById(R.id.recyclerView2);
+        productClasses.add(product);
+        productClasses.add(product1);
 
 
-        s5=getResources().getStringArray(R.array.products);
-        s6=getResources().getStringArray(R.array.description2);
-        s7=getResources().getStringArray(R.array.price);
 
-
-        myAdapterrecy myAdapt=new myAdapterrecy(this,s5,s6,s7,images);
+        myAdapterrecy myAdapt=new myAdapterrecy(productClasses,this);
         recycler3.setAdapter(myAdapt);
         snapHelper = new LinearSnapHelper();
         scaleCenterItemManager = new ScaleCenterItemManager(this, LinearLayoutManager.HORIZONTAL,false);

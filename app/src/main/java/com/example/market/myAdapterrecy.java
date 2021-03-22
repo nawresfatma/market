@@ -11,41 +11,43 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class myAdapterrecy extends RecyclerView.Adapter<myAdapterrecy.MyViewHolder> {
-    String data6[], data7[],data8[];
-    int images2[];
+    List<ProductClass> productList;
     Context context;
-    public myAdapterrecy(Context ct, String s3[], String s4[], String s5[], int img1[]) {
-        context = ct;
-        data6 = s3;
-        data7 = s4;
-        data8 = s5;
-        images2 = img1;
+
+    public myAdapterrecy(List<ProductClass> productList, Context context) {
+        this.productList = productList;
+        this.context = context;
     }
+
     @NonNull
     @Override
     public myAdapterrecy.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater =LayoutInflater.from(context);
-        View view=inflater.inflate(R.layout.activity_item_seller,parent,false);
+        View view=inflater.inflate(R.layout.activity_item_product,parent,false);
         return new myAdapterrecy.MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull myAdapterrecy.MyViewHolder holder, int position) {
-        holder.myText6.setText(data6[position]);
-        holder.myText7.setText(data7[position]);
-        holder.myText8.setText(data8[position]);
-        holder.myImage1.setImageResource(images2[position]);
+        ProductClass product=productList.get(position);
+        holder.myText6.setText(product.getProdName());
+        holder.myText7.setText(product.getProdDescription());
+        holder.myText8.setText(product.getProdPrice());
+        holder.myImage1.setImageResource(product.getProd());
     }
 
     @Override
     public int getItemCount() {
-        return data8.length;
+        return productList.size();
     }
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView myText6,myText7,myText8;
         ImageView myImage1;
-        ConstraintLayout mainLayout;
+
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -53,7 +55,6 @@ public class myAdapterrecy extends RecyclerView.Adapter<myAdapterrecy.MyViewHold
             myText6=itemView.findViewById(R.id.productname2);
             myText7=itemView.findViewById(R.id.description3);
             myText8=itemView.findViewById(R.id.price2);
-
             myImage1=itemView.findViewById(R.id.prod);
 
         }

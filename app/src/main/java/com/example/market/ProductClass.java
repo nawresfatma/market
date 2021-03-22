@@ -2,13 +2,29 @@ package com.example.market;
 
 public class ProductClass {
     private int prod;
-    private String prodName,prodDescription,prodPrice;
+    private String prodName,prodDescription,prodPrice,prodRemise;
+
+    public ProductClass(int prod, String prodName, String prodDescription, String prodPrice,String prodRemise) {
+        this.prod = prod;
+        this.prodName = prodName;
+        this.prodDescription = prodDescription;
+        this.prodPrice = prodPrice;
+        this.prodRemise=prodRemise;
+    }
 
     public ProductClass(int prod, String prodName, String prodDescription, String prodPrice) {
         this.prod = prod;
         this.prodName = prodName;
         this.prodDescription = prodDescription;
         this.prodPrice = prodPrice;
+    }
+
+    public String getProdRemise() {
+        return prodRemise;
+    }
+
+    public void setProdRemise(String prodRemise) {
+        this.prodRemise = prodRemise;
     }
 
     public int getProd() {

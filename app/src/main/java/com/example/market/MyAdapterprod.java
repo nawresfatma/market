@@ -26,7 +26,7 @@ class MyAdapterprod extends RecyclerView.Adapter<MyAdapterprod.MyViewHolder> {
     @Override
     public MyAdapterprod.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater =LayoutInflater.from(context);
-        View view=inflater.inflate(R.layout.activity_item_seller,parent,false);
+        View view=inflater.inflate(R.layout.activity_item_product,parent,false);
         return new MyAdapterprod.MyViewHolder(view);
     }
 
@@ -36,6 +36,7 @@ class MyAdapterprod extends RecyclerView.Adapter<MyAdapterprod.MyViewHolder> {
         holder.myText3.setText(productClass.getProdName());
         holder.myText4.setText(productClass.getProdDescription());
         holder.myText5.setText(productClass.getProdPrice());
+        holder.myText6.setText(productClass.getProdRemise());
         holder.myImage.setImageResource(productClass.getProd());
     }
 
@@ -44,7 +45,7 @@ class MyAdapterprod extends RecyclerView.Adapter<MyAdapterprod.MyViewHolder> {
         return productList.size();
     }
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView myText3,myText4,myText5;
+        TextView myText3,myText4,myText5,myText6;
         ImageView myImage;
 
 
@@ -54,6 +55,7 @@ class MyAdapterprod extends RecyclerView.Adapter<MyAdapterprod.MyViewHolder> {
             myText3=itemView.findViewById(R.id.productname);
             myText4=itemView.findViewById(R.id.description2);
             myText5=itemView.findViewById(R.id.price);
+            myText6=itemView.findViewById(R.id.off);
             myImage=itemView.findViewById(R.id.balgha);
 
         }
