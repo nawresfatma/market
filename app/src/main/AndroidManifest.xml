@@ -11,7 +11,6 @@
         android:theme="@style/Theme.Market">
 
         <activity android:name=".Produits" />
-        <activity android:name=".itemSeller" />
         <activity android:name=".MainActivity" />
         <activity android:name=".sellProd"></activity>
         <activity android:name=".detailsShops">

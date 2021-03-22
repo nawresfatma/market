@@ -11,16 +11,19 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class myAdapter extends RecyclerView.Adapter<myAdapter.MyViewHolder> {
-    String data1[],data2[];
-    int images[];
+    List<StoreItem> StoreItems=new ArrayList<>();
+
     Context context;
-    public myAdapter(Context ct , String s1[],String s2[],int img[]){
-        context=ct;
-        data1=s1;
-        data2=s2;
-        images=img;
+
+    public myAdapter(List<StoreItem> storeItems, Context context) {
+        StoreItems = storeItems;
+        this.context = context;
     }
+
     @NonNull
     @Override
     public myAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -31,23 +34,22 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull myAdapter.MyViewHolder holder, int position) {
-        holder.myText.setText(data1[position]);
-        holder.myText2.setText(data2[position]);
-        holder.myImage.setImageResource(images[position]);
+        StoreItem StoreItem=StoreItems.get(position);
+        holder.myText.setText(StoreItem.getStoreName());
+        holder.myText2.setText(StoreItem.getStoreDescription());
+        holder.myImage.setImageResource(StoreItem.getStoreImage());
     }
 
     @Override
     public int getItemCount() {
-        return data1.length;
+        return StoreItems.size();
     }
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView myText,myText2;
         ImageView myImage;
-        ConstraintLayout mainLayout;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-
             myText=itemView.findViewById(R.id.shopname);
             myText2=itemView.findViewById(R.id.description);
             myImage=itemView.findViewById(R.id.rajel);

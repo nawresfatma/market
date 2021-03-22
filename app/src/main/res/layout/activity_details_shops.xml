@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:iss_placeholder="@drawable/balghaslider"
         app:iss_error_image="@drawable/balghaslider"
-     />
+      />
 
     <com.github.florent37.shapeofview.shapes.RoundRectView
         android:id="@+id/imageView4"
