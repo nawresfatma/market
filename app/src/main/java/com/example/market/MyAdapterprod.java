@@ -52,7 +52,7 @@ class MyAdapterprod extends RecyclerView.Adapter<MyAdapterprod.MyViewHolder> {
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            myText3=itemView.findViewById(R.id.productname);
+            myText3=itemView.findViewById(R.id.productname1);
             myText4=itemView.findViewById(R.id.description2);
             myText5=itemView.findViewById(R.id.price);
             myText6=itemView.findViewById(R.id.off);

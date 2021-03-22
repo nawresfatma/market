@@ -217,6 +217,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageView6"
         app:layout_constraintEnd_toEndOf="@+id/imageView6"
         app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:srcCompat="@drawable/scann" />
+        app:srcCompat="@drawable/scan" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

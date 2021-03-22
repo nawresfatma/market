@@ -27,7 +27,7 @@ public class myAdapterrecy extends RecyclerView.Adapter<myAdapterrecy.MyViewHold
     @Override
     public myAdapterrecy.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater =LayoutInflater.from(context);
-        View view=inflater.inflate(R.layout.activity_item_product,parent,false);
+        View view=inflater.inflate(R.layout.activity_products_recycler,parent,false);
         return new myAdapterrecy.MyViewHolder(view);
     }
 
