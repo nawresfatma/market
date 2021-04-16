@@ -1,21 +1,25 @@
 package com.example.market;
 
 public class StoreItem {
-    private int storeImage;
+    private String storeImage;
   private String storeName;
   private String storeDescription;
 
-    public StoreItem(int storeImage, String storeName, String storeDescription) {
+    public StoreItem() {
+
+    }
+
+    public StoreItem(String storeImage, String storeName, String storeDescription) {
         this.storeImage = storeImage;
         this.storeName = storeName;
         this.storeDescription = storeDescription;
     }
 
-    public int getStoreImage() {
+    public String getStoreImage() {
         return storeImage;
     }
 
-    public void setStoreImage(int storeImage) {
+    public void setStoreImage(String storeImage) {
         this.storeImage = storeImage;
     }
 

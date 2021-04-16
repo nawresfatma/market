@@ -8,8 +8,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +20,10 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.MyViewHolder> {
 
     Context context;
 
-    public myAdapter(List<StoreItem> storeItems, Context context) {
+    public myAdapter(List<StoreItem> storeItems , Context c) {
         StoreItems = storeItems;
-        this.context = context;
+        context=c;
+
     }
 
     @NonNull
@@ -37,7 +39,8 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.MyViewHolder> {
         StoreItem StoreItem=StoreItems.get(position);
         holder.myText.setText(StoreItem.getStoreName());
         holder.myText2.setText(StoreItem.getStoreDescription());
-        holder.myImage.setImageResource(StoreItem.getStoreImage());
+       // holder.myImage.setImageResource(StoreItem.getStoreImage());
+        Picasso.get().load(StoreItems.get(position).getStoreImage()).into(holder.myImage);
     }
 
     @Override

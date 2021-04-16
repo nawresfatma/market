@@ -24,12 +24,13 @@ import java.util.List;
 public class sellProd extends AppCompatActivity {
     ImageView product ;
     RecyclerView recycler;
-    private SnapHelper snapHelper;
+     SnapHelper snapHelper;
+     myAdapter myAdapt;
     //firebase
-    private FirebaseDatabase db =FirebaseDatabase.getInstance();
-    private DatabaseReference mreff = db.getReference().child("shops");
 
-   List<StoreItem> StoreItems =new ArrayList<>();
+    DatabaseReference mreff ;
+
+   List<StoreItem> StoreItems;
     ScaleCenterItemManager scaleCenterItemManager;
    //StoreItem s=new StoreItem(R.drawable.rajel,"maison belgassem","best host in the medina , a coffee u would like to try in ur life");
    //StoreItem s1=new StoreItem(R.drawable.rajelekher,"hanout el Bey","best jebba in town and a handmade one");
@@ -39,17 +40,36 @@ public class sellProd extends AppCompatActivity {
         setContentView(R.layout.activity_sell_prod);
         recycler = findViewById(R.id.recycler);
         product=findViewById(R.id.Product);
+        StoreItems=new ArrayList<>();
 
 
-        myAdapter myAdapt = new myAdapter(StoreItems,this);
-        recycler.setAdapter(myAdapt);
+
         snapHelper = new LinearSnapHelper();
         scaleCenterItemManager = new ScaleCenterItemManager(this, LinearLayoutManager.HORIZONTAL, false);
         recycler.setLayoutManager(new LinearLayoutManager(this));
         recycler.setLayoutManager(scaleCenterItemManager);
         snapHelper.attachToRecyclerView(recycler);
+//Firebase
 
-        mreff.addValueEventListener(new ValueEventListener() {
+        mreff= FirebaseDatabase.getInstance().getReference("shops");
+        mreff.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot ds:dataSnapshot.getChildren()){
+                    StoreItem data=ds.getValue(StoreItem.class);
+                    StoreItems.add(data);
+
+                }
+             myAdapt = new myAdapter(StoreItems,sellProd.this);
+                recycler.setAdapter(myAdapt);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+      /*  mreff.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot:snapshot.getChildren()){
@@ -63,7 +83,7 @@ public class sellProd extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
-        });
+        }); */
 
 
         product.setOnClickListener(new View.OnClickListener() {
