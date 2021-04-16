@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="290dp"
     android:layout_height="380dp"
-    tools:context=".itemSeller">
+    >
 
         <com.github.florent37.shapeofview.shapes.RoundRectView
             android:id="@+id/imageView4"
@@ -22,54 +22,65 @@
                 android:layout_height="match_parent">
 
 
-                    <ImageView
-                  android:id="@+id/rajel"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                       android:src="@drawable/rajell"
-                        android:scaleType="fitXY"/>
-
-
+                <ImageView
+                    android:id="@+id/rajel"
+                    android:layout_width="260dp"
+                    android:layout_height="315dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/rajell"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imageView7"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/imageView7"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="257dp"
+                    android:layout_height="315dp"
+                    android:layout_marginTop="16dp"
+                    android:alpha=".20"
                     android:src="#000"
-                    android:alpha=".20" />
+                    app:layout_constraintBottom_toBottomOf="@+id/rajel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.151"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
 
                 <ImageView
                     android:id="@+id/imageView8"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:src="#000"
+                    android:layout_width="257dp"
+                    android:layout_height="97dp"
                     android:alpha=".70"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView7"
-                    tools:layout_editor_absoluteX="113dp" />
+                    android:src="#000"
+                    app:layout_constraintBottom_toBottomOf="@+id/rajel"
+                    app:layout_constraintEnd_toEndOf="@+id/rajel"
+                    app:layout_constraintStart_toStartOf="@+id/rajel" />
 
                 <TextView
                     android:id="@+id/description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
-                    android:layout_marginBottom="28dp"
+                    android:layout_marginBottom="84dp"
                     android:text="description"
                     android:textColor="#FFFFFF"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/shopname"
+                    app:layout_constraintHorizontal_bias="0.947"
                     app:layout_constraintStart_toStartOf="@+id/shopname" />
 
                 <TextView
                     android:id="@+id/shopname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
                     android:text="shop name"
                     android:textColor="#FFFFFF"
-                    android:layout_marginStart="18dp"
                     app:layout_constraintBottom_toTopOf="@+id/description"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/imageView8"
-                    app:layout_constraintVertical_bias="0.666" />
+                    app:layout_constraintVertical_bias="0.583" />
 
                 <ImageView
                     android:id="@+id/imageView5"
@@ -77,8 +88,8 @@
                     android:layout_height="wrap_content"
 
 
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginEnd="28dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/like" />
