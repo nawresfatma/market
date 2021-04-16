@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Market">
        <!-- <activity android:name=".MainActivity156"></activity>-->
-        <activity android:name=".Produits" />
+
         <activity android:name=".MainActivity" />
         <activity android:name=".MainActivity156" />
-        <activity android:name=".sellProd">
+        <activity android:name=".sellProd"/>
+        <activity android:name=".Produits" />
+        <activity android:name=".detailsShops">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

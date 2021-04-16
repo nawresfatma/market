@@ -10,7 +10,7 @@ import androidx.viewpager.widget.PagerAdapter;
 
 public class ImageAdapter extends PagerAdapter {
     private Context mContext ;
-    private int [] mImagesIds = new int [] {R.drawable.halfs, R.drawable.balgha,R.drawable.balghouna};
+    private int [] mImagesIds = new int [] {R.drawable.balgha, R.drawable.balgha,R.drawable.balghaokhra};
 
 
     ImageAdapter(Context context) {

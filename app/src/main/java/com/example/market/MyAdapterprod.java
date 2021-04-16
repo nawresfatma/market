@@ -8,8 +8,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -37,7 +38,7 @@ class MyAdapterprod extends RecyclerView.Adapter<MyAdapterprod.MyViewHolder> {
         holder.myText4.setText(productClass.getProdDescription());
         holder.myText5.setText(productClass.getProdPrice());
         holder.myText6.setText(productClass.getProdRemise());
-        holder.myImage.setImageResource(productClass.getProd());
+        Picasso.get().load(productList.get(position).getProd()).into(holder.myImage);
     }
 
     @Override
