@@ -13,9 +13,9 @@
 
         <activity android:name=".MainActivity" />
         <activity android:name=".MainActivity156" />
-        <activity android:name=".sellProd"/>
+        <activity android:name=".detailsShops"/>
         <activity android:name=".Produits" />
-        <activity android:name=".detailsShops">
+        <activity android:name=".sellProd">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

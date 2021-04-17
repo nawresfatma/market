@@ -24,12 +24,14 @@ import java.util.List;
 public class sellProd extends AppCompatActivity {
     ImageView product ;
     RecyclerView recycler;
+    RecyclerView recycler1;
      SnapHelper snapHelper;
      myAdapter myAdapt;
+     MoresellerAdapter MSadapt;
     //firebase
 
     DatabaseReference mreff ;
-
+   List<MoresellersList> MoresellersLists;
    List<StoreItem> StoreItems;
     ScaleCenterItemManager scaleCenterItemManager;
    //StoreItem s=new StoreItem(R.drawable.rajel,"maison belgassem","best host in the medina , a coffee u would like to try in ur life");
@@ -38,9 +40,11 @@ public class sellProd extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sell_prod);
+        recycler1=findViewById(R.id.recyclerMS);
         recycler = findViewById(R.id.recycler);
         product=findViewById(R.id.Product);
         StoreItems=new ArrayList<>();
+        MoresellersLists=new ArrayList<>();
 
 
 
@@ -48,9 +52,13 @@ public class sellProd extends AppCompatActivity {
         scaleCenterItemManager = new ScaleCenterItemManager(this, LinearLayoutManager.HORIZONTAL, false);
         recycler.setLayoutManager(new LinearLayoutManager(this));
         recycler.setLayoutManager(scaleCenterItemManager);
+        snapHelper = new LinearSnapHelper();
+        scaleCenterItemManager = new ScaleCenterItemManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recycler1.setLayoutManager(new LinearLayoutManager(this));
+        recycler1.setLayoutManager(scaleCenterItemManager);
         snapHelper.attachToRecyclerView(recycler);
-//Firebase
-
+        snapHelper.attachToRecyclerView(recycler1);
+//Firebase(Stores)
         mreff= FirebaseDatabase.getInstance().getReference("shops");
         mreff.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -69,6 +77,27 @@ public class sellProd extends AppCompatActivity {
 
             }
         });
+
+        //Firebase(Moresellers)
+        mreff= FirebaseDatabase.getInstance().getReference("MoreSellers");
+        mreff.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot ds:dataSnapshot.getChildren()){
+                    MoresellersList data=ds.getValue(MoresellersList.class);
+                    MoresellersLists.add(data);
+
+                }
+                MSadapt=new MoresellerAdapter(MoresellersLists,sellProd.this);
+                recycler1.setAdapter(MSadapt);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            } });
+
+
+
       /*  mreff.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
