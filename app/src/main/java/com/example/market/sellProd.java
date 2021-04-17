@@ -25,7 +25,8 @@ public class sellProd extends AppCompatActivity {
     ImageView product ;
     RecyclerView recycler;
     RecyclerView recycler1;
-     SnapHelper snapHelper;
+     SnapHelper snapHelper , snapHelperM;
+
      myAdapter myAdapt;
      MoresellerAdapter MSadapt;
     //firebase
@@ -33,7 +34,7 @@ public class sellProd extends AppCompatActivity {
     DatabaseReference mreff ;
    List<MoresellersList> MoresellersLists;
    List<StoreItem> StoreItems;
-    ScaleCenterItemManager scaleCenterItemManager;
+    ScaleCenterItemManager scaleCenterItemManager , scaleCenterItemManagerM;
    //StoreItem s=new StoreItem(R.drawable.rajel,"maison belgassem","best host in the medina , a coffee u would like to try in ur life");
    //StoreItem s1=new StoreItem(R.drawable.rajelekher,"hanout el Bey","best jebba in town and a handmade one");
     @Override
@@ -52,12 +53,12 @@ public class sellProd extends AppCompatActivity {
         scaleCenterItemManager = new ScaleCenterItemManager(this, LinearLayoutManager.HORIZONTAL, false);
         recycler.setLayoutManager(new LinearLayoutManager(this));
         recycler.setLayoutManager(scaleCenterItemManager);
-        snapHelper = new LinearSnapHelper();
-        scaleCenterItemManager = new ScaleCenterItemManager(this, LinearLayoutManager.HORIZONTAL, false);
+        snapHelperM = new LinearSnapHelper();
+        scaleCenterItemManagerM = new ScaleCenterItemManager(this, LinearLayoutManager.HORIZONTAL, false);
         recycler1.setLayoutManager(new LinearLayoutManager(this));
-        recycler1.setLayoutManager(scaleCenterItemManager);
+        recycler1.setLayoutManager(scaleCenterItemManagerM);
         snapHelper.attachToRecyclerView(recycler);
-        snapHelper.attachToRecyclerView(recycler1);
+        snapHelperM.attachToRecyclerView(recycler1);
 //Firebase(Stores)
         mreff= FirebaseDatabase.getInstance().getReference("shops");
         mreff.addListenerForSingleValueEvent(new ValueEventListener() {
