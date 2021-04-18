@@ -165,8 +165,210 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView16"
-            tools:listitem="@layout/activity_products_recycler"/>
+            />
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Your Rating"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerMoreProd" />
+        <ImageView
+            android:id="@+id/cadre1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17"
+            app:srcCompat="@drawable/rectanglerate" />
+        <TextView
+            android:id="@+id/rate1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="1"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/cadre1"
+            app:layout_constraintStart_toStartOf="@+id/cadre1"
+            app:layout_constraintTop_toTopOf="@+id/cadre1" />
 
+        <ImageView
+            android:id="@+id/star1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cadre1"
+            app:layout_constraintEnd_toEndOf="@+id/cadre1"
+            app:layout_constraintTop_toTopOf="@+id/cadre1"
+            app:srcCompat="@drawable/starrate" />
+        <ImageView
+            android:id="@+id/cadre2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cadre1"
+            app:layout_constraintStart_toEndOf="@+id/cadre1"
+            app:layout_constraintTop_toTopOf="@+id/cadre1"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/rectanglerate" />
+        <TextView
+            android:id="@+id/rate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="2"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/cadre2"
+            app:layout_constraintStart_toStartOf="@+id/cadre2"
+            app:layout_constraintTop_toTopOf="@+id/cadre2" />
+
+        <ImageView
+            android:id="@+id/star2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cadre2"
+            app:layout_constraintEnd_toEndOf="@+id/cadre2"
+            app:layout_constraintTop_toTopOf="@+id/cadre2"
+            app:srcCompat="@drawable/starrate" />
+
+        <ImageView
+            android:id="@+id/cadre3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cadre2"
+            app:layout_constraintStart_toEndOf="@+id/cadre2"
+            app:layout_constraintTop_toTopOf="@+id/cadre2"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/rectanglerate" />
+
+        <ImageView
+            android:id="@+id/star3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cadre3"
+            app:layout_constraintEnd_toEndOf="@+id/cadre3"
+            app:layout_constraintTop_toTopOf="@+id/cadre3"
+            app:srcCompat="@drawable/starrate" />
+        <TextView
+            android:id="@+id/rate3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="3"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/cadre3"
+            app:layout_constraintStart_toStartOf="@+id/cadre3"
+            app:layout_constraintTop_toTopOf="@+id/cadre3" />
+
+        <ImageView
+            android:id="@+id/cadre4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cadre3"
+            app:layout_constraintStart_toEndOf="@+id/cadre3"
+            app:layout_constraintTop_toTopOf="@+id/cadre3"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/rectanglerate" />
+
+        <ImageView
+            android:id="@+id/star4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cadre4"
+            app:layout_constraintEnd_toEndOf="@+id/cadre4"
+            app:layout_constraintTop_toTopOf="@+id/cadre4"
+            app:srcCompat="@drawable/starrate" />
+        <TextView
+            android:id="@+id/rate4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="4"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/cadre4"
+            app:layout_constraintStart_toStartOf="@+id/cadre4"
+            app:layout_constraintTop_toTopOf="@+id/cadre4" />
+
+        <ImageView
+            android:id="@+id/cadre5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cadre4"
+            app:layout_constraintStart_toEndOf="@+id/cadre4"
+            app:layout_constraintTop_toTopOf="@+id/cadre4"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/rectanglerate" />
+
+        <ImageView
+            android:id="@+id/star5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cadre5"
+            app:layout_constraintEnd_toEndOf="@+id/cadre5"
+            app:layout_constraintTop_toTopOf="@+id/cadre5"
+            app:srcCompat="@drawable/starrate" />
+        <TextView
+            android:id="@+id/rate5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="5"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/cadre5"
+            app:layout_constraintStart_toStartOf="@+id/cadre5"
+            app:layout_constraintTop_toTopOf="@+id/cadre5" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="345dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:lineSpacingExtra="6dp"
+            android:text="We would love to hear more about your experience or share with us your favorite momen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cadre1">
+        </TextView>
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Add Your Reveiw"
+            android:textColor="#EB9069"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Customer Reviews"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

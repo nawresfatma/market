@@ -53,7 +53,7 @@ class MyAdapterprod extends RecyclerView.Adapter<MyAdapterprod.MyViewHolder> {
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            prodName=itemView.findViewById(R.id.productname2);
+            prodName=itemView.findViewById(R.id.productitemname2);
             prodDesc=itemView.findViewById(R.id.description3);
             prodPrice=itemView.findViewById(R.id.price);
             prodRemise=itemView.findViewById(R.id.off);

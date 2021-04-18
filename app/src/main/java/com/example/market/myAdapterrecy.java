@@ -54,7 +54,7 @@ public class myAdapterrecy extends RecyclerView.Adapter<myAdapterrecy.MyViewHold
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            prodName=itemView.findViewById(R.id.productname2);
+            prodName=itemView.findViewById(R.id.productitemname2);
             prodDesc=itemView.findViewById(R.id.description3);
             prodPrice=itemView.findViewById(R.id.price2);
             prodImg=itemView.findViewById(R.id.Imgproduct);

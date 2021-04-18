@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -97,7 +96,7 @@ public class sellProd extends AppCompatActivity {
                 moresellersLists=new ArrayList<>();
                 for(DataSnapshot ds:dataSnapshot.getChildren()){
                     MoresellersList data=ds.getValue(MoresellersList.class);
-                    Toast.makeText(sellProd.this, ds.toString(), Toast.LENGTH_LONG).show();
+                    //Toast.makeText(sellProd.this, ds.toString(), Toast.LENGTH_LONG).show();
 
                     moresellersLists.add(data);
                 }

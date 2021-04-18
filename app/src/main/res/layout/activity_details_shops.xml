@@ -94,7 +94,7 @@
                     android:id="@+id/cadre2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="156dp"
                     app:layout_constraintBottom_toBottomOf="@+id/cadre1"
                     app:layout_constraintStart_toEndOf="@+id/cadre1"
                     app:layout_constraintTop_toTopOf="@+id/cadre1"

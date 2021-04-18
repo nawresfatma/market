@@ -3,7 +3,7 @@ package com.example.market;
 public class MoresellersList {
     private String moreSellname;
     private String moreSelllocation;
-    private String MoreSellerDesc;
+    private String moreSellerDesc;
     private String moreSellerImg;
 //jdida
     public MoresellersList() {
@@ -12,7 +12,7 @@ public class MoresellersList {
     public MoresellersList(String moreSellname, String moreSelllocation, String moreSellerDesc, String moreSellerImg) {
         this.moreSellname = moreSellname;
         this.moreSelllocation = moreSelllocation;
-        MoreSellerDesc = moreSellerDesc;
+        this.moreSellerDesc = moreSellerDesc;
         this.moreSellerImg = moreSellerImg;
     }
 
@@ -33,11 +33,11 @@ public class MoresellersList {
     }
 
     public String getMoreSellerDesc() {
-        return MoreSellerDesc;
+        return moreSellerDesc;
     }
 
     public void setMoreSellerDesc(String moreSellerDesc) {
-        MoreSellerDesc = moreSellerDesc;
+        this.moreSellerDesc = moreSellerDesc;
     }
 
     public String getMoreSellerImg() {
