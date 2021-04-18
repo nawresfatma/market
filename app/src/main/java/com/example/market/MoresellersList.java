@@ -1,51 +1,50 @@
 package com.example.market;
 
 public class MoresellersList {
-    private String MoreSellname;
-    private String Moreselllocation;
-    private String Moresellerdesc;
-    private String MoresellerImg;
+    private String moreSellname;
+    private String moreSelllocation;
+    private String MoreSellerDesc;
+    private String moreSellerImg;
 
     public MoresellersList() {
     }
 
-    public MoresellersList(String moreSellname, String moreselllocation, String moresellerdesc, String moresellerImg) {
-        MoreSellname = moreSellname;
-        Moreselllocation = moreselllocation;
-        Moresellerdesc = moresellerdesc;
-        MoresellerImg = moresellerImg;
+    public MoresellersList(String moreSellname, String moreSelllocation, String moreSellerDesc, String moreSellerImg) {
+        this.moreSellname = moreSellname;
+        this.moreSelllocation = moreSelllocation;
+        MoreSellerDesc = moreSellerDesc;
+        this.moreSellerImg = moreSellerImg;
     }
 
-
     public String getMoreSellname() {
-        return MoreSellname;
+        return moreSellname;
     }
 
     public void setMoreSellname(String moreSellname) {
-        MoreSellname = moreSellname;
+        this.moreSellname = moreSellname;
     }
 
-    public String getMoreselllocation() {
-        return Moreselllocation;
+    public String getMoreSelllocation() {
+        return moreSelllocation;
     }
 
-    public void setMoreselllocation(String moreselllocation) {
-        Moreselllocation = moreselllocation;
+    public void setMoreSelllocation(String moreSelllocation) {
+        this.moreSelllocation = moreSelllocation;
     }
 
-    public String getMoresellerdesc() {
-        return Moresellerdesc;
+    public String getMoreSellerDesc() {
+        return MoreSellerDesc;
     }
 
-    public void setMoresellerdesc(String moresellerdesc) {
-        Moresellerdesc = moresellerdesc;
+    public void setMoreSellerDesc(String moreSellerDesc) {
+        MoreSellerDesc = moreSellerDesc;
     }
 
-    public String getMoresellerImg() {
-        return MoresellerImg;
+    public String getMoreSellerImg() {
+        return moreSellerImg;
     }
 
-    public void setMoresellerImg(String moresellerImg) {
-        MoresellerImg = moresellerImg;
+    public void setMoreSellerImg(String moreSellerImg) {
+        this.moreSellerImg = moreSellerImg;
     }
 }

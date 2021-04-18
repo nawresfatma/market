@@ -24,15 +24,15 @@ import java.util.List;
 public class sellProd extends AppCompatActivity {
     ImageView product ;
     RecyclerView recycler;
-    RecyclerView recycler1;
+    RecyclerView recyclerM;
      SnapHelper snapHelper , snapHelperM;
 
      myAdapter myAdapt;
      MoresellerAdapter MSadapt;
     //firebase
 
-    DatabaseReference mreff ;
-   List<MoresellersList> MoresellersLists;
+    DatabaseReference mreff,mreff1 ;
+   List<MoresellersList> moresellersLists;
    List<StoreItem> StoreItems;
     ScaleCenterItemManager scaleCenterItemManager , scaleCenterItemManagerM;
    //StoreItem s=new StoreItem(R.drawable.rajel,"maison belgassem","best host in the medina , a coffee u would like to try in ur life");
@@ -41,11 +41,11 @@ public class sellProd extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sell_prod);
-        recycler1=findViewById(R.id.recyclerMS);
-        recycler = findViewById(R.id.recycler);
+        recyclerM=findViewById(R.id.recyclerMS);
+        recycler=findViewById(R.id.recycler);
         product=findViewById(R.id.Product);
-        StoreItems=new ArrayList<>();
-        MoresellersLists=new ArrayList<>();
+
+
 
 
 
@@ -53,23 +53,30 @@ public class sellProd extends AppCompatActivity {
         scaleCenterItemManager = new ScaleCenterItemManager(this, LinearLayoutManager.HORIZONTAL, false);
         recycler.setLayoutManager(new LinearLayoutManager(this));
         recycler.setLayoutManager(scaleCenterItemManager);
-        snapHelperM = new LinearSnapHelper();
-        scaleCenterItemManagerM = new ScaleCenterItemManager(this, LinearLayoutManager.HORIZONTAL, false);
-        recycler1.setLayoutManager(new LinearLayoutManager(this));
-        recycler1.setLayoutManager(scaleCenterItemManagerM);
         snapHelper.attachToRecyclerView(recycler);
-        snapHelperM.attachToRecyclerView(recycler1);
+
+        //2nd
+        snapHelperM = new LinearSnapHelper();
+        scaleCenterItemManagerM = new ScaleCenterItemManager(this, LinearLayoutManager.VERTICAL, false);
+        recyclerM.setLayoutManager(new LinearLayoutManager(this));
+        recyclerM.setLayoutManager(scaleCenterItemManagerM);
+        snapHelperM.attachToRecyclerView(recyclerM);
+
+
+
+
 //Firebase(Stores)
         mreff= FirebaseDatabase.getInstance().getReference("shops");
         mreff.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                StoreItems=new ArrayList<>();
                 for(DataSnapshot ds:dataSnapshot.getChildren()){
                     StoreItem data=ds.getValue(StoreItem.class);
                     StoreItems.add(data);
 
                 }
-             myAdapt = new myAdapter(StoreItems,sellProd.this);
+                myAdapt = new myAdapter(StoreItems,sellProd.this);
                 recycler.setAdapter(myAdapt);
             }
 
@@ -80,40 +87,26 @@ public class sellProd extends AppCompatActivity {
         });
 
         //Firebase(Moresellers)
-        mreff= FirebaseDatabase.getInstance().getReference("MoreSellers");
-        mreff.addListenerForSingleValueEvent(new ValueEventListener() {
+        mreff1= FirebaseDatabase.getInstance().getReference().child("Moresellers");
+        mreff1.addListenerForSingleValueEvent(new ValueEventListener() {
+
+
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                moresellersLists=new ArrayList<>();
                 for(DataSnapshot ds:dataSnapshot.getChildren()){
                     MoresellersList data=ds.getValue(MoresellersList.class);
-                    MoresellersLists.add(data);
+                    //Toast.makeText(sellProd.this, ds.toString(), Toast.LENGTH_LONG).show();
 
+                    moresellersLists.add(data);
                 }
-                MSadapt=new MoresellerAdapter(MoresellersLists,sellProd.this);
-                recycler1.setAdapter(MSadapt);
+                MSadapt=new MoresellerAdapter(moresellersLists,sellProd.this);
+                recyclerM.setAdapter(MSadapt);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
             } });
-
-
-
-      /*  mreff.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot dataSnapshot:snapshot.getChildren()){
-                    StoreItem storeItem=dataSnapshot.getValue(StoreItem.class);
-                    StoreItems.add(storeItem);
-                }
-                myAdapt.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        }); */
 
 
         product.setOnClickListener(new View.OnClickListener() {

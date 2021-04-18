@@ -16,11 +16,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MoresellerAdapter extends RecyclerView.Adapter<MoresellerAdapter.MyViewHolder>{
-    List<MoresellersList> MoresellersLists=new ArrayList<>();
+    List<MoresellersList> moresellersList=new ArrayList<>();
     Context context;
 
-    public MoresellerAdapter(List<MoresellersList> moresellersLists, Context Co) {
-        MoresellersLists = moresellersLists;
+    public MoresellerAdapter(List<MoresellersList>msellersList, Context Co) {
+        moresellersList = msellersList;
         context = Co;
     }
 
@@ -34,29 +34,29 @@ public class MoresellerAdapter extends RecyclerView.Adapter<MoresellerAdapter.My
 
     @Override
     public void onBindViewHolder(@NonNull MoresellerAdapter.MyViewHolder holder, int position) {
-        MoresellersList MoresellerList=MoresellersLists.get(position);
-        holder.myText.setText(MoresellerList.getMoreSellname());
-        holder.myText2.setText(MoresellerList.getMoreselllocation());
-        holder.myText3.setText(MoresellerList.getMoresellerdesc());
+        MoresellersList MoresellerList=moresellersList.get(position);
+        holder.moreSellname.setText(MoresellerList.getMoreSellname());
+        holder.moreSelllocation.setText(MoresellerList.getMoreSelllocation());
+        holder.moreSellerDesc.setText(MoresellerList.getMoreSellerDesc());
         // holder.myImage.setImageResource(StoreItem.getStoreImage());
-      //  Picasso.get().load(StoreItems.get(position).getStoreImage()).into(holder.myImage);
-        Picasso.get().load(MoresellersLists.get(position).getMoresellerImg()).into(holder.myImage);
+
+        Picasso.get().load(moresellersList.get(position).getMoreSellerImg()).into(holder.moreSellerImg);
 
     }
 
     @Override
     public int getItemCount() {
-        return MoresellersLists.size();
+        return moresellersList.size();
     }
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView myText,myText2,myText3;
-        ImageView myImage;
+        TextView moreSellname,moreSelllocation,moreSellerDesc;
+        ImageView moreSellerImg;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            myText=itemView.findViewById(R.id.moresellername);
-            myText2=itemView.findViewById(R.id.mslocation);
-            myText3=itemView.findViewById(R.id.msdescription);
-            myImage=itemView.findViewById(R.id.sellerImg);
+            moreSellname=itemView.findViewById(R.id.moresellername);
+            moreSelllocation=itemView.findViewById(R.id.mslocation);
+            moreSellerDesc=itemView.findViewById(R.id.msdescription);
+            moreSellerImg=itemView.findViewById(R.id.sellerImg);
         }
     }
 }

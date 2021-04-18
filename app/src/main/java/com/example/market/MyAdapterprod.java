@@ -15,10 +15,10 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 class MyAdapterprod extends RecyclerView.Adapter<MyAdapterprod.MyViewHolder> {
-    List<ProductClass> productList;
+    List<ListProduct> productList;
     Context context;
 
-    public MyAdapterprod(List<ProductClass> productList, Context context) {
+    public MyAdapterprod(List<ListProduct> productList, Context context) {
         this.productList = productList;
         this.context = context;
     }
@@ -33,12 +33,12 @@ class MyAdapterprod extends RecyclerView.Adapter<MyAdapterprod.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyAdapterprod.MyViewHolder holder, int position) {
-     ProductClass productClass=productList.get(position);
-        holder.myText3.setText(productClass.getProdName());
-        holder.myText4.setText(productClass.getProdDescription());
-        holder.myText5.setText(productClass.getProdPrice());
-        holder.myText6.setText(productClass.getProdRemise());
-        Picasso.get().load(productList.get(position).getProd()).into(holder.myImage);
+     ListProduct productClass=productList.get(position);
+        holder.prodName.setText(productClass.getProdName());
+        holder.prodDesc.setText(productClass.getProdDescription());
+        holder.prodPrice.setText(productClass.getProdPrice());
+        holder.prodRemise.setText(productClass.getProdRemise());
+        Picasso.get().load(productList.get(position).getProd()).into(holder.prodImg);
     }
 
     @Override
@@ -46,18 +46,18 @@ class MyAdapterprod extends RecyclerView.Adapter<MyAdapterprod.MyViewHolder> {
         return productList.size();
     }
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView myText3,myText4,myText5,myText6;
-        ImageView myImage;
+        TextView prodName,prodDesc,prodPrice,prodRemise;
+        ImageView prodImg;
 
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            myText3=itemView.findViewById(R.id.productname1);
-            myText4=itemView.findViewById(R.id.description2);
-            myText5=itemView.findViewById(R.id.price);
-            myText6=itemView.findViewById(R.id.off);
-            myImage=itemView.findViewById(R.id.balgha);
+            prodName=itemView.findViewById(R.id.productname2);
+            prodDesc=itemView.findViewById(R.id.description3);
+            prodPrice=itemView.findViewById(R.id.price);
+            prodRemise=itemView.findViewById(R.id.off);
+            prodImg=itemView.findViewById(R.id.balgha);
 
         }
     }

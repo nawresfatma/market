@@ -7,20 +7,7 @@
     tools:context=".detailsShops">
 
 
-    <com.denzcoskun.imageslider.ImageSlider
-        android:id="@+id/image_slider"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        app:iss_auto_cycle="true"
-        app:iss_delay="0"
-        app:iss_period="1000"
-        app:iss_corner_radius="20"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:iss_placeholder="@drawable/balghaslider"
-        app:iss_error_image="@drawable/balghaslider"
-      />
+
 
     <com.github.florent37.shapeofview.shapes.RoundRectView
         android:id="@+id/imageView4"
@@ -31,9 +18,15 @@
 
         app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintTop_toBottomOf="@+id/image_slider"
+        app:layout_constraintTop_toBottomOf="@+id/image_slider3"
         app:shape_roundRect_topLeftRadius="14dp"
         app:shape_roundRect_topRightRadius="14dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/rac" />
 
         <ScrollView
             android:layout_width="wrap_content"
@@ -129,11 +122,12 @@
                     android:text="My Product "
                     android:textColor="#EB9069"
                     android:textSize="18sp"
+
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerView2"
+                    android:id="@+id/recyclerView7"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="16dp"
@@ -190,8 +184,8 @@
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="28dp"
                     android:text="balgha hammem"
                     android:textColor="#000000"
                     android:textSize="24sp"
@@ -215,6 +209,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
+                    android:lineSpacingExtra="6dp"
                     android:text="@string/desc"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

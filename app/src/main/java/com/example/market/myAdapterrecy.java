@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
@@ -17,12 +16,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class myAdapterrecy extends RecyclerView.Adapter<myAdapterrecy.MyViewHolder> {
-    List<ProductClass> productList;
+    List<ListProduct> ListsMaisons=new ArrayList<>();
     Context context;
 
-    public myAdapterrecy(List<ProductClass> productList, Context context) {
-        this.productList = productList;
-        this.context = context;
+    public myAdapterrecy(List<ListProduct> listMaisons, Context c) {
+        ListsMaisons = listMaisons;
+        context = c;
     }
 
     @NonNull
@@ -34,30 +33,31 @@ public class myAdapterrecy extends RecyclerView.Adapter<myAdapterrecy.MyViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull myAdapterrecy.MyViewHolder holder, int position) {
-        ProductClass product=productList.get(position);
-        holder.myText6.setText(product.getProdName());
-        holder.myText7.setText(product.getProdDescription());
-        holder.myText8.setText(product.getProdPrice());
-        Picasso.get().load(productList.get(position).getProd()).into(holder.myImage1);
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+       ListProduct list=ListsMaisons.get(position);
+        holder.prodName.setText(list.getProdName());
+        holder.prodDesc.setText(list.getProdDescription());
+        holder.prodPrice.setText(list.getProdPrice());
+       // holder.myImage1.setImageResource(list.getProd());
+       Picasso.get().load(ListsMaisons.get(position).getProd()).into(holder.prodImg);
     }
 
     @Override
     public int getItemCount() {
-        return productList.size();
+        return ListsMaisons.size();
     }
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView myText6,myText7,myText8;
-        ImageView myImage1;
+        TextView prodName,prodDesc,prodPrice;
+        ImageView prodImg;
 
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            myText6=itemView.findViewById(R.id.productname2);
-            myText7=itemView.findViewById(R.id.description3);
-            myText8=itemView.findViewById(R.id.price2);
-            myImage1=itemView.findViewById(R.id.prod);
+            prodName=itemView.findViewById(R.id.productname2);
+            prodDesc=itemView.findViewById(R.id.description3);
+            prodPrice=itemView.findViewById(R.id.price2);
+            prodImg=itemView.findViewById(R.id.Imgproduct);
 
         }
     }
