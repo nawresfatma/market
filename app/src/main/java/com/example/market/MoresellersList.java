@@ -5,7 +5,7 @@ public class MoresellersList {
     private String moreSelllocation;
     private String MoreSellerDesc;
     private String moreSellerImg;
-
+//jdida
     public MoresellersList() {
     }
 

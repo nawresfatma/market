@@ -26,7 +26,7 @@ public class sellProd extends AppCompatActivity {
     RecyclerView recycler;
     RecyclerView recyclerM;
      SnapHelper snapHelper , snapHelperM;
-
+//jdida
      myAdapter myAdapt;
      MoresellerAdapter MSadapt;
     //firebase
