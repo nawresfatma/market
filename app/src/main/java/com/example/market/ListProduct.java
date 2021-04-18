@@ -14,7 +14,12 @@ public class ListProduct {
         this.prodPrice = prodPrice;
         this.prodRemise=prodRemise;
     }
+    public ListProduct(String prod, String prodName,  String prodPrice) {
+        this.prod = prod;
+        this.prodName = prodName;
 
+        this.prodPrice = prodPrice;
+    }
     public ListProduct(String prod, String prodName, String prodDescription, String prodPrice) {
         this.prod = prod;
         this.prodName = prodName;

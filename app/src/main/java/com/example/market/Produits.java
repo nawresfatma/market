@@ -24,13 +24,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Produits extends AppCompatActivity {
-    List<ListProduct> productList = new ArrayList<>();
-    RecyclerView recycler2;
+    List<ListProduct> productList ,accessoryList;
+    RecyclerView recycler2,recyclerAccessory;
     private SnapHelper snapHelper;
     ScaleCenterItemManager scaleCenterItemManager;
-    MyAdapterprod myAdapat1;
-    DatabaseReference ref;
+    MyAdapterprod myAdapat1 ;
+    adapterAccessory adapterAccessory;
+    DatabaseReference ref,refAccessory;
    ImageView store;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +45,7 @@ public class Produits extends AppCompatActivity {
         // recycler2.setAdapter(myAdapt);
         snapHelper = new LinearSnapHelper();
         scaleCenterItemManager = new ScaleCenterItemManager(this, LinearLayoutManager.HORIZONTAL, false);
-        recycler2.setLayoutManager(new GridLayoutManager(Produits.this,2));
+        recycler2.setLayoutManager(new LinearLayoutManager(this));
         recycler2.setLayoutManager(scaleCenterItemManager);
         snapHelper.attachToRecyclerView(recycler2);
 
@@ -68,7 +70,33 @@ public class Produits extends AppCompatActivity {
             }
         });
 
+        //recyclerAccessory
+        recyclerAccessory=findViewById(R.id.recyclerAccessory);
+        //Firebase accessory
+        refAccessory = FirebaseDatabase.getInstance().getReference().child("shops").child("store1").child("products");
+        refAccessory.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                accessoryList = new ArrayList<>();
+                for (DataSnapshot data2 : dataSnapshot.getChildren()) {
+                    ListProduct p1 = data2.getValue(ListProduct.class);
 
+                   accessoryList.add(p1);
+                }
+                adapterAccessory = new adapterAccessory(accessoryList,Produits.this);
+
+                recyclerAccessory.setLayoutManager(new GridLayoutManager(Produits.this,1));
+
+                recyclerAccessory.setAdapter(adapterAccessory);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(Produits.this, "Opsss.... Something is wrong", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //intent
      store.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
