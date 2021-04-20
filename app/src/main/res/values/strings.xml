@@ -22,5 +22,7 @@
     </string-array>
     <string name="desc">Dar Hammuda Pasha was built by Hammuda Pasha Bey, a Muradid prince in 1630. The palace was the residence place of Hammuda Pasha and his first wife
 </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

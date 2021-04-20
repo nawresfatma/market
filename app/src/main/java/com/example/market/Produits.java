@@ -104,4 +104,6 @@ public class Produits extends AppCompatActivity {
             startActivity(intentLoadNewActivity);
         }
     });
-}}
+}
+
+}

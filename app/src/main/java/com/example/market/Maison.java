@@ -1,6 +1,8 @@
 package com.example.market;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -52,7 +54,7 @@ public class Maison extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot ds:dataSnapshot.getChildren()){
-                    Toast.makeText(Maison.this, ds.toString(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(Maison.this, ds.toString(), Toast.LENGTH_SHORT).show();
                     ListProduct data=ds.getValue(ListProduct.class);
 
                     listMaisons.add(data);
@@ -74,4 +76,10 @@ public class Maison extends AppCompatActivity {
         slideModels.add(new SlideModel(R.drawable.slider, ScaleTypes.FIT));
         imageSlider.setImageList(slideModels);
 
-    }}
+    }
+    public void RateInterface (View v){
+        Intent intentLoadNewActivity = new Intent(Maison.this, Rating.class);
+        startActivity(intentLoadNewActivity);
+    }
+
+}
