@@ -41,7 +41,7 @@ public class sellProd extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sell_prod);
-        recyclerM=findViewById(R.id.recyclerMS);
+        //recyclerM=findViewById(R.id.recyclerMS);
         recycler=findViewById(R.id.recycler);
         product=findViewById(R.id.Product);
 
@@ -56,11 +56,11 @@ public class sellProd extends AppCompatActivity {
         snapHelper.attachToRecyclerView(recycler);
 
         //2nd
-        snapHelperM = new LinearSnapHelper();
+      /*  snapHelperM = new LinearSnapHelper();
         scaleCenterItemManagerM = new ScaleCenterItemManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerM.setLayoutManager(new LinearLayoutManager(this));
         recyclerM.setLayoutManager(scaleCenterItemManagerM);
-        snapHelperM.attachToRecyclerView(recyclerM);
+        snapHelperM.attachToRecyclerView(recyclerM);*/
 
 
 
@@ -87,7 +87,7 @@ public class sellProd extends AppCompatActivity {
         });
 
         //Firebase(Moresellers)
-        mreff1= FirebaseDatabase.getInstance().getReference().child("Moresellers");
+     /*   mreff1= FirebaseDatabase.getInstance().getReference().child("Moresellers");
         mreff1.addListenerForSingleValueEvent(new ValueEventListener() {
 
 
@@ -107,7 +107,7 @@ public class sellProd extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
             } });
-
+*/
 
         product.setOnClickListener(new View.OnClickListener() {
             @Override
