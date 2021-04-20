@@ -39,6 +39,7 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
                 android:text="WELL NOTE!"
+
                 android:textColor="#EB9069"
                 android:textSize="24sp"
                 android:textStyle="bold"

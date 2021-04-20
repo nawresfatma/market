@@ -10,11 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Market">
         <activity android:name=".Rating" /> <!-- <activity android:name=".MainActivity156"></activity> -->
-        <activity android:name=".sellProd" />
+        <activity android:name=".Maison" />
         <activity android:name=".detailsShops" />
         <activity android:name=".Produits" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Maison">
+        <activity android:name=".sellProd">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
